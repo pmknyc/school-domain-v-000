@@ -8,7 +8,7 @@ class School
   def initialize(school_name)
     @roster = {}
     @school_name = school_name
-		
+
     # @@all << self
   end
 
@@ -30,11 +30,11 @@ class School
 
 #5 Sort student names within each grade
 #  return new hash with names sorted
-  def sort 
+  def sort
 		roster_sort = {}
     	roster.each do |grade, names|
 				p names.sort
-				roster_sort[grade] = names.sort	
+				roster_sort[grade] = names.sort
 			end
 		roster_sort
   end
