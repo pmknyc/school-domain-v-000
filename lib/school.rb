@@ -33,7 +33,6 @@ class School
   def sort
 		roster_sort = {}
     	roster.each do |grade, names|
-				p names.sort
 				roster_sort[grade] = names.sort
 			end
 		roster_sort
