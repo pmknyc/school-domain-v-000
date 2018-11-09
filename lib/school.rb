@@ -13,9 +13,12 @@ class School
   end
 
 #3  add data to roster hash
-# {grade => ["student", "student2"]}
+# {grade => ["student name", "student name2"]}
   def add_student(name, grade)
+    # if grade key not yet in roster
+    # create it with empty name values array
     roster[grade] ||= roster[grade] = []
+    # then, shovel new name value into grade key
     roster[grade] << name
   end
 
