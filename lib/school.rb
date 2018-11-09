@@ -15,12 +15,8 @@ class School
 #3  add data to roster hash
 # {grade => ["student", "student2"]}
   def add_student(name, grade)
-    if roster[grade]       # if grade exists in roster
-       roster[grade] << name  # add new student to grade level
-      else                   # if this grade not yet in roster
-       roster[grade] = []  # create empty student array for grade key
-       roster[grade] << name  # then add 1st student to grade
-    end
+    roster[grade] ||= roster[grade] = []
+    roster[grade] << name
   end
 
 #4  retrieve all students in grade called as argument
